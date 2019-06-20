@@ -1,0 +1,146 @@
+<div class="main-content" style="margin-top:55px; background-color:#212F41;">
+  <div class="container-fluid">
+    <hr>
+    <div class="row">
+        <div class="col-lg-6 col-md-3 col-sm-6" style="margin-top:0;">
+          <h3 style="font-size:medium; margin-top:10px; padding-top:0; margin-bottom:0; color:white;">JAKARTA BIKE RENTAL</h3>
+          <h3 style="font-size:small; margin-top:0; padding-top:0; margin-bottom:0; color:white;">Number of Motorcycle</h3>
+          <h3 style="font-size:small; margin-top:0; padding-top:0; color:white;">{{items.length}}</h3>
+        </div>
+        <div class="col-lg-6 col-md-3 col-sm-6" style="margin-top:0;">
+          <!-- <button type="button" style="margin-left:665px; margin-top:10px; font-size: 20px; background-color:blue; color:white;">Edit</button> -->
+        </div>
+      </div>
+      <div class="row">
+          <div class="col-lg-3 col-md-3 col-sm-6" style="margin-top:0;">
+              <div class="card card-stats card-content" style="width:350px; height:520px;">
+                <div class="card-header card-header-success card-header-icon">
+                    <div>
+                      <p style="text-align:left;margin-top:20px; margin-left:130px; margin-bottom:0px; font-size: 30px;">OIL</p>
+                      <a class="material-icons" href="#" style="color:white; margin-bottom:0; padding-bottom:0;">
+                      <!-- <i class="material-icons update">update</i> -->
+                    </a>
+                    </div>
+                    <hr style="margin-top:0;">
+                    <a href="#pablo">
+                      <!-- <app-charts *ngIf="oilwarning" [save]="oilsave" [warning]="oilwarning" [critical] = "oilcritical"> -->
+					  <app-charts *ngIf="oilwarning" [data]="arrayoil">
+                    </app-charts>
+                    </a>
+                      <h3 class="card-title name" style="margin-top:20px;">
+                          <img class="img" style="height:5px; width:5px; margin-bottom:0px" src="./assets/img/dot.png" />
+                          <small style="font-size:15px; margin-left:10px;">Safe <br/> {{oilsave}} Motorcycles</small>
+                      </h3>
+                      <h3 class="card-title name">
+                        <img class="img" style="height:5px; width:5px; margin-bottom:0px" src="./assets/img/dot.png" />
+                          <small style="font-size:15px; margin-left:10px;">Warning <br/> {{oilwarning}} Motorcycles</small>
+                      </h3>
+                      <h3 class="card-title name">
+                        <img class="img" style="height:5px; width:5px; margin-bottom:0px" src="./assets/img/dot.png" />
+                          <small style="font-size:15px; margin-left:10px;">Critical <br/> {{oilcritical}} Motorcycles</small>
+                      </h3>
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6">
+              <div class="card card-stats card-content" style="width:350px; height:520px;">
+                  <div class="card-header card-header-success card-header-icon">
+                      <div>
+                        <p style="text-align:left;margin-top:20px; margin-left:110px; margin-bottom:0px; font-size: 30px;">ACCU</p>
+                        <a class="material-icons" href="#" style="color:white; margin-bottom:0; padding-bottom:0;">
+                        <!-- <i class="material-icons update">update</i> -->
+                      </a>
+                      </div>
+                      <hr style="margin-top:0;">
+                      <a href="#pablo">
+                        <!-- <app-charts *ngIf="accuwarning" [save]="accusave" [warning]="accuwarning" [critical] = "accucritical"> -->
+						<app-charts *ngIf="oilwarning" [data]="arrayaccu">
+                    </app-charts>
+                      </a>
+                      <h3 class="card-title name" style="margin-top:20px;">
+                        <img class="img" style="height:5px; width:5px; margin-bottom:0px" src="./assets/img/dot.png" />
+                          <small style="font-size:15px; margin-left:10px;">Safe <br/> {{accusave}} Motorcycles</small>
+                      </h3>
+                      <h3 class="card-title name">
+                        <img class="img" style="height:5px; width:5px; margin-bottom:0px" src="./assets/img/dot.png" />
+                          <small style="font-size:15px; margin-left:10px;">Warning <br/> {{accuwarning}} Motorcycles</small>
+                      </h3>
+                      <h3 class="card-title name">
+                        <img class="img" style="height:5px; width:5px; margin-bottom:0px" src="./assets/img/dot.png" />
+                          <small style="font-size:15px; margin-left:10px;">Critical <br/> {{accucritical}} Motorcycles</small>
+                      </h3>
+                  </div>
+
+              </div>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6">
+              <div class="card card-stats card-content">
+                  <div class="card-header card-header-danger card-header-icon">
+                    <div>
+                      <p style="text-align:left;margin-top:20px; margin-left:260px; margin-bottom:0px; font-size: 30px;">LOCATION</p>
+                      <a class="material-icons" href="#" style="color:white; margin-bottom:0; padding-bottom:0;">
+                      <!-- <i class="material-icons update">update</i> -->
+                    </a>
+                    </div>
+                    <hr style="margin-top:0">
+                    <a href="#pablo">
+                        <agm-map [latitude]="lat" [longitude]="lng">
+							
+						</agm-map>
+                    </a>
+                    <hr>
+                    <p style="font-size:15px; margin-left:10px;">Last Updated : 10 Seconds Ago</p>
+                  </div>
+              </div>
+				</div>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-12 col-md-6 col-sm-6">
+                                <div class="card">
+                                    <div class="card-header">
+                                      <div class="row">
+                                          <div class="col-lg-6 col-md-3 col-sm-6">
+                                            <h2 class="card-title" style="text-align:left;margin-top:10px; margin-left: 20px; font-size: 20px;">My Motorcycles</h2>
+                                            </div>
+                                            <div class="col-lg-6 col-md-3 col-sm-6">
+                                         <!-- <button type="button" style="text-align:right;margin-top:10px; margin-left:550px;  font-size: 20px; background-color:black; color:white;">Refresh</button> -->
+                                          <button type="button" style="margin-top:10px; margin-left: 580px; font-size: 10px; background-color:#26374C; color:white;" (click)="deletedata(motor.id)">Add</button>
+                                            </div>
+										</div>
+										<div class="card-body">
+											<div class="table-responsive">
+												<table class="table">
+													<thead class=" text-primary">
+														<th>Name</th>
+														<th>Distance Travelled</th>
+														<th>Location</th>
+														<th>Hours Travelled</th>
+														<th>Oil</th>
+														<th>Accu</th>
+														<th>Status</th>
+                            <th>Delete</th>
+													</thead>
+													<tbody *ngFor="let motor of items">
+														<tr>
+                              <td>{{motor.id}}</td>
+															<!-- <td>{{(getPlate(motor.data["mtr-id"] | async))?.license_plate}}</td> -->
+															<td>{{motor.distance_traveled}}</td>
+															<td>{{motor.location.latitude}} , {{motor.location.longitude}}</td>
+															<td>{{motor.hours_used}}</td>
+															<td>{{motor.oil_volume}}</td>
+															<td>{{motor.battery_voltage}}</td>
+															<td>{{motor.newstatus}}</td>
+                              <td> <button type="button" style="margin-top:10px; font-size: 10px; background-color:#26374C; color:white;" (click)="deletedata(motor.id)">Delete</button></td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
