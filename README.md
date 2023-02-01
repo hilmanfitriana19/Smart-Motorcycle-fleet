@@ -1,1 +1,2 @@
-ng serve
+
+RUN project by command **ng serve**
